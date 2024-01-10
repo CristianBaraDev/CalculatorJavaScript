@@ -7,40 +7,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1 class="myH1">My text</h1>
     <div class = "calculator">
 
         <div class="screen">
-            <input class="display" >
+            <input id="display" placeholder="0" readonly>
         </div>
         <div class="row">
-            <div class="cButton greenButton"><p>C</p></div>
-            <div class="squareButton greenButton">X²</div>
-            <div class="rootButton greenButton">√x</div>
-            <div class="plusButton dgButton">+</div>
+            <div class="button greenButton">C</div>
+            <div class="button greenButton">X²</div>
+            <div class="button greenButton">√x</div>
+            <div class="button dgButton">+</div>
         </div>
         <div class ="row">
-            <div class="sevenButton lgButton">7</div>
-            <div class="eigthButton lgButton">8</div>
-            <div class="nineButton lgButton">9</div>
-            <div class="minusButton dgButton">-</div>
+            <div class="button lgButton">7</div>
+            <div class="button lgButton">8</div>
+            <div class="button lgButton">9</div>
+            <div class="button dgButton">-</div>
         </div>
         <div class="row">
-            <div class="fourButton lgButton">4</div>
-            <div class="fiveButton lgButton">5</div>
-            <div class="sixButton lgButton">6</div>
-            <div class="multiplyButton dgButton">x</div>
+            <div class="button lgButton">4</div>
+            <div class="button lgButton">5</div>
+            <div class="button lgButton">6</div>
+            <div class="button dgButton">x</div>
         </div>
         <div class="row">
-            <div class="oneButton lgButton">1</div>
-            <div class="twoButton lgButton">2</div>
-            <div class="threeButton lgButton">3</div>
-            <div class="fourButton dgButton">÷</div>
+            <div class="button lgButton">1</div>
+            <div class="button lgButton">2</div>
+            <div class="button lgButton">3</div>
+            <div class="button dgButton">/</div>
         </div>
         <div class="row">
-            <div class="zeroButton zerobutton">0</div>
-            <div class="dotButton lgButton">.</div>
-            <div class="equalsButton dgButton">=</div>
+            <div class="zeroButton button">0</div>
+            <div class="button lgButton">.</div>
+            <div class="button dgButton">=</div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

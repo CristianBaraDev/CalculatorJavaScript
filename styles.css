@@ -18,15 +18,17 @@ body{
     flex-direction: row;
 }
 
-.display{
+#display{
    width: 100%;
+   border-color: transparent;
+   text-align: right;
+   font-size: 40px;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .row{
     width: 600px;
     height: 150px;
-    border: 1px;
-    border-style: solid;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,6 +41,7 @@ body{
     width: 150px;
     height: 150px;
     text-align:center;
+    cursor:pointer;
 }
 
 .lgButton{
@@ -46,6 +49,10 @@ body{
     width: 150px;
     height: 150px;
     text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    cursor:pointer;
 }
 
 .dgButton{
@@ -53,18 +60,41 @@ body{
     width: 150px;
     height: 150px;
     text-align: center;
+    cursor:pointer;
 }
 
 .zeroButton{
     background-color: #6E786E;
     width: 300px;
     height: 150px;
-    text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    cursor:pointer;
 }
+
+.zeroText{
+    margin-bottom: 40%;
+}
+
+
 
 p{
     vertical-align: center;
     text-align: center;
     margin-top: 40%;
+    color: #ffffff;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button{
+    line-height: 150px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
