@@ -1,9 +1,9 @@
 let display = document.getElementById('display');
 let myH1 = document.getElementsByClassName('h1Text');
 
-
 let buttons = Array.from(document.getElementsByClassName('button'));
 
+//Loop to get buttons to add text to the display
 buttons.map(button => {
     button.addEventListener('click', (e) =>{
         e.preventDefault();
@@ -74,7 +74,7 @@ function addToDisplay(value){
     document.getElementById('display').value += value;
 }
 
-
+//Function to calculate squares
 function calculateSquares(){
     try{
         let number = parseFloat(document.getElementById('display').value);
@@ -82,27 +82,28 @@ function calculateSquares(){
     }catch(error){
         document.getElementById('display').value ='Error';
     }
-    
 }
 
+//Function to calculate squares roots
 function calculateSquaresRoots(){
     try{
     let number = parseFloat(document.getElementById('display').value);
+    if(number<0) throw "Negative Number";
     display.value = Math.sqrt(number);
     }catch(error){
         document.getElementById('display').value ='Error';
     }
 }
 
+
 function calculateResult(){
     try{
+        // Getting the text from the display and  splitting the numbers and operators
         let regExpression = document.getElementById('display').value;
-
         let numbers = regExpression.split(/\+|\-|\x|\//g);
         let operators = regExpression.replace(/[0-9]|\./g, '').split('');
-        let square = regExpression;
-        let squareRoot =regExpression;
 
+        //Function to calculate the result of the display
         let result =  parseFloat(numbers[0]);
         for(let i = 0; i < operators.length;i++){
             let nextNumber = parseFloat(numbers[i + 1]);
@@ -120,13 +121,12 @@ function calculateResult(){
                     if(nextNumber !==0){
                         result /= nextNumber;
                     }else{
-                        throw "Division by zero";
+                        throw "Cannot divide by zero";
                     }
                     break;
                 default:
                     throw "Invalid operator"
             }
-
         }
         document.getElementById('display').value =result;
     }catch(error){
@@ -134,7 +134,8 @@ function calculateResult(){
     }
 }
 
+//Function to clear the displayy
 function cleanDisplay(){
-    document.getElementById('display').value ='0';
+    document.getElementById('display').value ='';
 }
 

@@ -1,7 +1,19 @@
-body{
-    background-color: #def1de;
+
+html{
+    height: 100%;
+    width: 100%;
+    background: rgb(183,238,174);
+    background: radial-gradient(circle, rgb(75, 2, 94) 0%, rgb(40, 85, 143) 100%);
 }
 
+h1{
+    margin-left: 40%;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 48px;
+}
+
+/* Container for the whole calculator*/
 .calculator{
     margin-left: 35%;
     margin-top: 5%;
@@ -9,6 +21,10 @@ body{
     height: 900px;
     display: flex;
     flex-direction: column;
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(to top,#73E177,#d10d0d,#e9e513)1 ;
+    overflow: hidden;
 }
 
 .screen{
@@ -26,70 +42,101 @@ body{
    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Style for the rows of the calculator*/
 .row{
     width: 600px;
     height: 150px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-content: space-around;
 }
 
-
+/* Code for the styles of different Buttonsr*/
 .greenButton{
     background-color: #73E177;
-    width: 150px;
-    height: 150px;
+    width: 25%;
+    height: 100%;
     text-align:center;
     cursor:pointer;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: thin;
 }
+
+.greenButton:hover{
+    background-color: #07df0e;
+}
+
+.greenButton:active {
+    background-color: #73E177;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 .lgButton{
     background-color: #6E786E;
-    width: 150px;
-    height: 150px;
+    width: 25%;
+    height: 100%;
     text-align: center;
-    border-color: black;
+    border-color: rgb(255, 255, 255);
     border-style: solid;
     border-width: thin;
     cursor:pointer;
 }
+
+.lgButton:hover{
+    background-color: #07df0e;
+}
+
+.lgButton:active {
+    background-color: #73E177;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 .dgButton{
     background-color: #363D35;
-    width: 150px;
-    height: 150px;
+    width: 25%;
+    height: 100%;
     text-align: center;
     cursor:pointer;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: thin;
 }
+
+.dgButton:hover{
+    background-color: #07df0e;
+}
+
+.dgButton:active {
+    background-color: #73E177;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 .zeroButton{
     background-color: #6E786E;
-    width: 300px;
-    height: 150px;
+    width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-color: black;
+    border-color: rgb(255, 255, 255);
     border-style: solid;
     border-width: thin;
     cursor:pointer;
 }
 
-.zeroText{
-    margin-bottom: 40%;
+.zeroButton:hover{
+    background-color: #07df0e;
 }
 
-
-
-p{
-    vertical-align: center;
-    text-align: center;
-    margin-top: 40%;
-    color: #ffffff;
-    font-size: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+.zeroButton:active {
+    background-color: #73E177;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 .button{
     line-height: 150px;
@@ -98,3 +145,4 @@ p{
     font-size: 40px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
