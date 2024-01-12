@@ -3,7 +3,7 @@ let myH1 = document.getElementsByClassName('h1Text');
 
 let buttons = Array.from(document.getElementsByClassName('button'));
 
-//Loop to get buttons to add text to the display
+//Loop to get buttons to add text to the display and call for the current number in calculator to do squares operations
 buttons.map(button => {
     button.addEventListener('click', (e) =>{
         e.preventDefault();
@@ -70,6 +70,7 @@ buttons.map(button => {
 
 });
 
+//This function adds text to our string in our display
 function addToDisplay(value){
     document.getElementById('display').value += value;
 }
@@ -103,7 +104,8 @@ function calculateResult(){
         let numbers = regExpression.split(/\+|\-|\x|\//g);
         let operators = regExpression.replace(/[0-9]|\./g, '').split('');
 
-        //Function to calculate the result of the display
+        //Function to convert the display text into numbers and operators and calculate the result of the display
+        //Displays "Error" when dividing by zero or entering the wrong type of Input
         let result =  parseFloat(numbers[0]);
         for(let i = 0; i < operators.length;i++){
             let nextNumber = parseFloat(numbers[i + 1]);
